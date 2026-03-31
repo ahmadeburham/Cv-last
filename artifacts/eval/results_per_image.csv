@@ -1,0 +1,8 @@
+input_image,status,id_present,detection_confidence,face_status,time_total
+/tmp/user_uploaded_attachments/image_1.jpg,failed,False,0.0,failed,
+/tmp/user_uploaded_attachments/image_2.jpg,failed,False,0.0,failed,
+/tmp/user_uploaded_attachments/image_3.png,failed,False,0.0,failed,
+/tmp/user_uploaded_attachments/image_4.jpg,failed,False,0.0,failed,
+/tmp/user_uploaded_attachments/image_5.jpg,failed,False,0.0,failed,
+/tmp/user_uploaded_attachments/image_6.jpg,failed,False,0.0,failed,
+/tmp/user_uploaded_attachments/image_7.jpg,failed,False,0.0,failed,
