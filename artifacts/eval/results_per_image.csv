@@ -1,1 +1,2 @@
 input_image,status,id_present,detection_confidence,face_status,time_total
+.\rectified_card.png,success,True,0.7353251516819002,failed,180.7171

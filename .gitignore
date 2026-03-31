@@ -1,9 +1,19 @@
+@"
 __pycache__/
 .pytest_cache/
 *.pyc
+.venv/
+
 artifacts/runs_real/**/*.jpg
 artifacts/runs_real/**/*.jpeg
 artifacts/runs_real/**/*.png
+artifacts/runs_real/**/*.bmp
+
 output/**/*.jpg
 output/**/*.jpeg
 output/**/*.png
+output/**/*.bmp
+
+local_test_runs/
+*.zip
+"@ | Set-Content .gitignore
