@@ -1,0 +1,35 @@
+{
+  "template_path": "",
+  "output_dir": "artifacts/runs",
+  "debug": true,
+  "aligned_size": [1000, 640],
+  "fields": {
+    "portrait": {"x": 0.04, "y": 0.16, "w": 0.27, "h": 0.45},
+    "birth_date": {"x": 0.05, "y": 0.63, "w": 0.26, "h": 0.10},
+    "name": {"x": 0.35, "y": 0.24, "w": 0.60, "h": 0.22},
+    "address": {"x": 0.35, "y": 0.46, "w": 0.60, "h": 0.22},
+    "id_number": {"x": 0.28, "y": 0.82, "w": 0.66, "h": 0.13}
+  },
+  "ocr": {
+    "primary_backend": "pytesseract",
+    "fallback_backends": ["easyocr"],
+    "tesseract_lang": "ara+eng",
+    "min_text_len": 1
+  },
+  "detection": {
+    "rotation_candidates": [0, 90, 180, 270],
+    "canny_low": 50,
+    "canny_high": 180,
+    "min_card_area_ratio": 0.08,
+    "min_confidence": 0.15
+  },
+  "preprocess": {
+    "scale_factor": 2.0,
+    "apply_clahe": true,
+    "median_blur_ksize": 3
+  },
+  "face": {
+    "match_threshold": 0.55,
+    "min_face_size": 48
+  }
+}
