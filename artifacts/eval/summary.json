@@ -1,5 +1,5 @@
 {
-  "num_images": 7,
+  "num_images": 0,
   "detections_success": 0,
   "alignments_success": 0,
   "ocr_name_non_empty": 0,
@@ -7,5 +7,5 @@
   "ocr_id_non_empty": 0,
   "ocr_birth_non_empty": 0,
   "face_match_success_count": 0,
-  "note": "Execution performed; full CV pipeline blocked when dependencies are unavailable."
+  "note": "No test images discovered in repository at run time; CER/WER cannot be computed without labels."
 }

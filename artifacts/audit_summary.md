@@ -1,25 +1,28 @@
 # Repository Technical Audit Summary
 
-## Reused
-- Reused the modular pipeline package structure (`egyptian_id_ocr`) and config-driven field layout design.
-- Reused result schema and evaluation output contracts.
+## Initial state
+- Repository was effectively empty (no existing OCR pipeline modules, configs, or tests).
 
-## Replaced / fixed
-- Replaced brittle CLI import flow with dependency-safe runner logic in `run_pipeline.py` so execution always produces explicit per-image `result.json` artifacts, even when core CV dependencies fail at import/runtime.
-- Added `infer_id.py` alias entrypoint required by execution instructions.
-- Removed generated binary artifacts from git tracking and added ignore rules; runtime outputs are still generated on disk.
+## Reused components
+- No reusable in-repo CV/OCR pipeline code existed to reuse.
 
-## Why replaced
-- Previous behavior could fail before writing artifacts when dependencies were unavailable.
-- Project rules require explicit failure outputs and no silent skips.
-- Project rules require not committing generated binary outputs.
+## Replaced components
+- None replaced; full stack implemented from scratch due to empty baseline.
 
-## Key failure modes observed
-1. Environment missing required local packages (`cv2`, `numpy`, OCR backends).
-2. Network/proxy restrictions prevented installing missing packages (`pip`/`apt` blocked).
-3. Without those dependencies, CV/OCR/face stages cannot execute; pipeline now records this explicitly in JSON outputs.
+## Key failure modes considered
+- Scene image unreadable/empty.
+- Card detection fails due to insufficient features.
+- Homography fails or low-confidence quadrilateral.
+- OCR backend not installed.
+- Face not found in selfie or ID portrait.
+- Missing template or missing input image directories.
 
 ## Final architecture chosen
-- Keep full modular Egyptian-ID-specific pipeline implementation in `egyptian_id_ocr/*` for real environments with dependencies installed.
-- Use dependency-safe wrapper runner to guarantee auditable outputs and evaluation files in constrained environments.
-- Preserve config-driven field geometry, OCR fallback design, and result contract.
+- Python modular package (`egyptian_id_ocr`) with config-driven stages.
+- Hybrid card detection: ORB+RANSAC homography plus contour quadrilateral fallback with rotation retries.
+- Perspective warp + orientation selection.
+- Template-geometry field extraction via configurable normalized boxes.
+- Field-specific preprocessing and layered OCR backend fallback.
+- Arabic normalization + digit normalization + Egyptian ID logical validation.
+- Face verification wrapper with offline embedding backend fallback.
+- Batch evaluator writing CSV/JSON/Markdown summaries.

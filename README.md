@@ -25,12 +25,12 @@ System packages often needed:
 
 ## Run (single)
 ```bash
-python infer_id.py --image <scene.jpg> --selfie <selfie.jpg> --template <template.jpg> --output-dir artifacts/runs
+python run_pipeline.py --image <scene.jpg> --selfie <selfie.jpg> --template <template.jpg> --output-dir artifacts/runs
 ```
 
 ## Run (batch)
 ```bash
-python infer_id.py --input-dir <images_dir> --selfie-dir <selfie_dir> --template <template.jpg> --output-dir artifacts/runs
+python run_pipeline.py --input-dir <images_dir> --selfie-dir <selfie_dir> --template <template.jpg> --output-dir artifacts/runs
 ```
 
 ## Evaluation output
@@ -60,6 +60,3 @@ The pipeline writes:
 - No cloud OCR; purely local backends.
 - Quality depends on local OCR packages and image quality.
 - CER/WER requires explicit ground truth labels.
-
-## Dependency fallback behavior
-If OpenCV/Numpy/OCR dependencies are unavailable, `run_pipeline.py` now still executes and writes explicit failed `result.json` files with `dependency_or_runtime_failure` reasons for each input so failures are auditable instead of silent.
