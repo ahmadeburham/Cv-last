@@ -1,0 +1,43 @@
+{
+  "status": "failed",
+  "input_image": "/tmp/user_uploaded_attachments/image_6.jpg",
+  "selfie_image": "",
+  "template_image": "/tmp/user_uploaded_attachments/image_1.jpg",
+  "id_present": false,
+  "detection_confidence": 0.0,
+  "selected_rotation": 0,
+  "card_quad": [],
+  "ocr": {
+    "name": {
+      "raw": "",
+      "normalized": ""
+    },
+    "address": {
+      "raw": "",
+      "normalized": ""
+    },
+    "id_number": {
+      "raw": "",
+      "normalized_digits": "",
+      "valid": false
+    },
+    "birth_date": {
+      "raw": "",
+      "normalized_digits": "",
+      "valid": false
+    }
+  },
+  "face_match": {
+    "verified": null,
+    "score": null,
+    "threshold": 0.55,
+    "status": "failed",
+    "reason": "dependency_or_runtime_failure:No module named 'cv2'"
+  },
+  "artifacts": {},
+  "errors": [
+    "dependency_or_runtime_failure:No module named 'cv2'"
+  ],
+  "warnings": [],
+  "timings": {}
+}
