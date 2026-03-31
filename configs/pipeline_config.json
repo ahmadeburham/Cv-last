@@ -1,35 +1,3 @@
-{
-  "template_path": "main_temp.jpeg",
-  "output_dir": "artifacts/runs",
-  "debug": true,
-  "aligned_size": [1000, 640],
-  "fields": {
-    "portrait": {"x": 0.035, "y": 0.13, "w": 0.285, "h": 0.47},
-    "birth_date": {"x": 0.045, "y": 0.61, "w": 0.30, "h": 0.11},
-    "name": {"x": 0.36, "y": 0.21, "w": 0.59, "h": 0.24},
-    "address": {"x": 0.36, "y": 0.45, "w": 0.59, "h": 0.24},
-    "id_number": {"x": 0.28, "y": 0.80, "w": 0.67, "h": 0.14}
-  },
-  "ocr": {
-    "primary_backend": "pytesseract",
-    "fallback_backends": ["easyocr"],
-    "tesseract_lang": "ara+eng",
-    "min_text_len": 1
-  },
-  "detection": {
-    "rotation_candidates": [0, 90, 180, 270],
-    "canny_low": 45,
-    "canny_high": 160,
-    "min_card_area_ratio": 0.08,
-    "min_confidence": 0.18
-  },
-  "preprocess": {
-    "scale_factor": 2.0,
-    "apply_clahe": true,
-    "median_blur_ksize": 3
-  },
-  "face": {
-    "match_threshold": 0.55,
-    "min_face_size": 48
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1cc6752b7fe1b8dc29998fe0e7a477bb38910952a3c087959e09d9955f32e31b
+size 958

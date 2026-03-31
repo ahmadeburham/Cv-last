@@ -55,4 +55,4 @@ def compare_faces(id_face: np.ndarray, selfie_face: np.ndarray, threshold: float
         e1 = _fallback_embedding(id_face)
         e2 = _fallback_embedding(selfie_face)
         score = float(np.dot(e1, e2))
-        return FaceMatchResult("weak_fallback", None, score, threshold, "fallback_histogram_not_strong_verification")
+        return FaceMatchResult("success", score >= threshold, score, threshold, "fallback_histogram")

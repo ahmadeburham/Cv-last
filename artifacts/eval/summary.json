@@ -1,12 +1,3 @@
-{
-  "num_images": 0,
-  "excluded_non_scene_inputs": 0,
-  "detections_success": 0,
-  "alignments_success": 0,
-  "ocr_name_non_empty": 0,
-  "ocr_address_non_empty": 0,
-  "ocr_id_non_empty": 0,
-  "ocr_birth_non_empty": 0,
-  "face_match_success_count": 0,
-  "note": "Execution performed; full CV pipeline blocked when dependencies are unavailable."
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d2c0e07114214fc192495a9f0f01b504c20ab03c35f3fcf8303358df99be1ba2
+size 282
