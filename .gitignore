@@ -1,0 +1,9 @@
+__pycache__/
+.pytest_cache/
+*.pyc
+artifacts/runs_real/**/*.jpg
+artifacts/runs_real/**/*.jpeg
+artifacts/runs_real/**/*.png
+output/**/*.jpg
+output/**/*.jpeg
+output/**/*.png
